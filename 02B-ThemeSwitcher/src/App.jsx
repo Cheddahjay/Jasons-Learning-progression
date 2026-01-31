@@ -1,3 +1,4 @@
+
 //Theme switcher 
 //useTheme which manages light and dark mode
 //Container component that uses children to manage background color based on them
@@ -6,16 +7,13 @@
 
 import {useState} from 'react'
 
-
 function useTheme(){
   const [toggle,setToggle] = useState(false)
   const change = () => setToggle(!toggle)
   return {toggle, change}
 }
 
-
 function Button({children, onClick}){
-
 
   return(
     <div>
@@ -33,7 +31,6 @@ function Container({toggle, change, children}){
     backgroundColor = 'black'
   }
 
-
   return(
     <div style={{backgroundColor: backgroundColor, padding: '10px'}}>
       <div>
@@ -46,7 +43,6 @@ function Container({toggle, change, children}){
   )
 }
 
-
 function App(){
   const {toggle, change} = useTheme(false)
   
@@ -58,3 +54,4 @@ function App(){
   )
 }
 export default App
+```
